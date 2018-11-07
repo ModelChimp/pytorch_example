@@ -108,7 +108,7 @@ def main():
     torch.manual_seed(args.seed)
 
     # MODELCHIMP Tracker
-    tracker = Tracker('<PROJECT KEY>', host='demo.modelchimp.com', experiment_name='MNIST Classification')
+    tracker = Tracker('<PROJECT KEY>', host='localhost:8000', experiment_name='MNIST Classification')
     tracker.add_multiple_params(param)
 
     device = torch.device("cuda" if use_cuda else "cpu")
